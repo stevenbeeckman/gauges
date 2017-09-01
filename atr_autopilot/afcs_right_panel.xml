@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="afcs_right_panel">
+    <Descr>ATR-42 AFCS Right Panel</Descr>
+    <Filename>afcs_right_panel.xml</Filename>
+    <SimGauge.Gauge id="afcs_right_panel" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_autopilot">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="afcs_right_panel_background.bmp" Name="afcs_right_panel_background.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <MouseArea id="MouseArea">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Size>336,174</Size>
+            <CursorType>Normal</CursorType>
+            <MouseArea id="MouseArea_ALT">
+                <FloatPosition>27.000,54.000</FloatPosition>
+                <Size>104,104</Size>
+                <CursorType>Hand</CursorType>
+                <MouseArea id="Decrement">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <Size>62,104</Size>
+                    <CursorType>DownArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>(&gt;K:AP_ALT_VAR_DEC) (G:Var5) 10 - s0 0 &lt; if{ 340 } els{ l0 } (&gt;G:Var5)</Script>
+                        <ClickRepeat>True</ClickRepeat>
+                    </MouseClick>
+                </MouseArea>
+                <MouseArea id="Increment">
+                    <FloatPosition>63.000,0.000</FloatPosition>
+                    <Size>62,104</Size>
+                    <CursorType>UpArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>(&gt;K:AP_ALT_VAR_INC) (G:Var5) 10 + s0 360 &gt; if{ 0 (&gt;G:Var5) } els{ l0 } (&gt;G:Var5)</Script>
+                        <ClickRepeat>True</ClickRepeat>
+                    </MouseClick>
+                </MouseArea>
+            </MouseArea>
+            <MouseArea id="MouseArea_SPD">
+                <FloatPosition>211.000,54.000</FloatPosition>
+                <Size>104,104</Size>
+                <CursorType>Hand</CursorType>
+                <MouseArea id="Decrement">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <Size>62,104</Size>
+                    <CursorType>DownArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>1 (&gt;K:AP_SPD_VAR_DEC) (G:Var3) 10 - s0 0 &lt; if{ 340 } els{ l0 } (&gt;G:Var3)</Script>
+                        <ClickRepeat>True</ClickRepeat>
+                    </MouseClick>
+                </MouseArea>
+                <MouseArea id="Increment">
+                    <FloatPosition>63.000,0.000</FloatPosition>
+                    <Size>62,104</Size>
+                    <CursorType>UpArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>1 (&gt;K:AP_SPD_VAR_INC) (G:Var3) 10 + s0 360 &gt; if{ 0 (&gt;G:Var3) } els{ l0 } (&gt;G:Var3)</Script>
+                        <ClickRepeat>True</ClickRepeat>
+                    </MouseClick>
+                </MouseArea>
+            </MouseArea>
+        </MouseArea>
+    </SimGauge.Gauge>
+</SimBase.Document>

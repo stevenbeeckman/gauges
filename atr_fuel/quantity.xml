@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="quantity">
+    <Descr>ATR-42 Fuel Quantity Indicator</Descr>
+    <Filename>quantity.xml</Filename>
+    <SimGauge.Gauge id="quantity" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_fuel">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="quantity.bmp" Name="quantity.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <Element id="fuel_quantity_text">
+            <FloatPosition>215.000,18.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="fuel_quantity_text">
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>45</FontHeight>
+                <GaugeString>FUEL QTY</GaugeString>
+                <Size>170,50</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="left_tank_text">
+            <FloatPosition>106.000,72.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="left_tank_text">
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>30</FontHeight>
+                <GaugeString>L. TK: 2250</GaugeString>
+                <HorizontalAlign>CENTER</HorizontalAlign>
+                <Size>130,30</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="kg_text">
+            <FloatPosition>288.000,72.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="right_tank_text">
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>30</FontHeight>
+                <GaugeString>kg</GaugeString>
+                <HorizontalAlign>CENTER</HorizontalAlign>
+                <Size>130,30</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="right_tank_text">
+            <FloatPosition>380.000,72.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="right_tank_text">
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>30</FontHeight>
+                <GaugeString>R. TK: 2250</GaugeString>
+                <Size>130,30</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="left_tank_quantity">
+            <FloatPosition>68.000,121.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="left_tank_quantity">
+                <FontColor>orange</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>64</FontHeight>
+                <GaugeString>%((A:FUEL LEFT QUANTITY, gallons) 3.05721008 *)%!4d!</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Size>200,70</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="right_tank_quantity">
+            <FloatPosition>340.000,121.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="right_tank_quantity">
+                <FontColor>orange</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>64</FontHeight>
+                <GaugeString>%((A:FUEL RIGHT QUANTITY, gallons) 3.05721008 *)%!4d!</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Size>200,70</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="lo_lvl_left_text">
+            <FloatPosition>108.000,228.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="lo_lvl_left_text">
+                <Bold>True</Bold>
+                <FontColorScript>(A:FUEL LEFT QUANTITY, gallons) 3.05721008 * 160 &gt; if{ &apos;white&apos; } els{ &apos;gold&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>28</FontHeight>
+                <GaugeString>LO LVL .</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Size>104,30</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="lo_lvl_right_text">
+            <FloatPosition>406.000,228.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="lo_lvl_right_text">
+                <Bold>True</Bold>
+                <FontColorScript>(A:FUEL RIGHT QUANTITY, gallons) 3.05721008 * 160 &gt; if{ &apos;white&apos; } els{ &apos;gold&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>28</FontHeight>
+                <GaugeString>LO LVL .</GaugeString>
+                <Size>104,30</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="lo_lvl_left_warning">
+            <FloatPosition>211.000,228.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <Circle id="Circle">
+                <Radius>16</Radius>
+                <FillColorScript>(A:FUEL LEFT QUANTITY, gallons) 3.05721008 * 160 &gt; if{ &apos;black&apos; } els{ &apos;gold&apos; }</FillColorScript>
+                <LineWidth>1</LineWidth>
+                <LineColor>black</LineColor>
+            </Circle>
+        </Element>
+        <Element id="lo_lvl_right_warning">
+            <FloatPosition>363.000,228.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <Circle id="Circle">
+                <Radius>16</Radius>
+                <FillColorScript>(A:FUEL RIGHT QUANTITY, gallons) 3.05721008 * 160 &gt; if{ &apos;black&apos; } els{ &apos;gold&apos; }</FillColorScript>
+                <LineWidth>1</LineWidth>
+                <LineColor>black</LineColor>
+            </Circle>
+        </Element>
+    </SimGauge.Gauge>
+</SimBase.Document>

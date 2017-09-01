@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="gear_indicator">
+    <Descr>ATR-42 Landing Gear Indicator</Descr>
+    <Filename>gear_indicator.xml</Filename>
+    <SimGauge.Gauge id="landing_gear_indicator" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_gear">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="gear_indicator_background.bmp" Name="gear_indicator_background.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <Element id="ldg_gear_text">
+            <FloatPosition>106.000,29.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="ldg_gear_text">
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>60</FontHeight>
+                <GaugeString>LDG GEAR</GaugeString>
+                <Size>260,70</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="left_gear_indicator">
+            <FloatPosition>55.000,172.000</FloatPosition>
+            <Visibility>(A:GEAR LEFT POSITION, percent) 100 ==</Visibility>
+            <Polygon id="Polygon">
+                <LineWidth>10</LineWidth>
+                <LineColor>0x538845</LineColor>
+                <Point id="left_gear_upper_left">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                </Point>
+                <Point id="left_gear_upper_right">
+                    <FloatPosition>70.000,0.000</FloatPosition>
+                </Point>
+                <Point id="left_gear_down">
+                    <FloatPosition>35.000,40.000</FloatPosition>
+                </Point>
+            </Polygon>
+        </Element>
+        <Element id="left_gear_unlock">
+            <FloatPosition>58.000,133.000</FloatPosition>
+            <Visibility>(A:GEAR LEFT POSITION, percent) 0 != (A:GEAR LEFT POSITION, percent) 100 != and</Visibility>
+            <GaugeText id="left_gear_unlock_text">
+                <FontColor>0x2c25b2</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>27</FontHeight>
+                <GaugeString>UNLK</GaugeString>
+                <Size>83,30</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="center_gear_indicator">
+            <FloatPosition>181.000,172.000</FloatPosition>
+            <Visibility>(A:GEAR CENTER POSITION, percent) 100 ==</Visibility>
+            <Polygon id="Polygon">
+                <LineWidth>10</LineWidth>
+                <LineColor>0x538845</LineColor>
+                <Point id="left_gear_upper_left">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                </Point>
+                <Point id="left_gear_upper_right">
+                    <FloatPosition>70.000,0.000</FloatPosition>
+                </Point>
+                <Point id="left_gear_down">
+                    <FloatPosition>35.000,40.000</FloatPosition>
+                </Point>
+            </Polygon>
+        </Element>
+        <Element id="center_gear_unlock">
+            <FloatPosition>184.000,133.000</FloatPosition>
+            <Visibility>(A:GEAR CENTER POSITION, percent) 0 != (A:GEAR CENTER POSITION, percent) 100 != and</Visibility>
+            <GaugeText id="left_gear_unlock_text">
+                <FontColor>0x2c25b2</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>27</FontHeight>
+                <GaugeString>UNLK</GaugeString>
+                <Size>83,30</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="right_gear_indicator">
+            <FloatPosition>309.000,172.000</FloatPosition>
+            <Visibility>(A:GEAR RIGHT POSITION, percent) 100 ==</Visibility>
+            <Polygon id="Polygon">
+                <LineWidth>10</LineWidth>
+                <LineColor>0x538845</LineColor>
+                <Point id="left_gear_upper_left">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                </Point>
+                <Point id="left_gear_upper_right">
+                    <FloatPosition>70.000,0.000</FloatPosition>
+                </Point>
+                <Point id="left_gear_down">
+                    <FloatPosition>35.000,40.000</FloatPosition>
+                </Point>
+            </Polygon>
+        </Element>
+        <Element id="right_gear_unlock">
+            <FloatPosition>313.000,133.000</FloatPosition>
+            <Visibility>(A:GEAR RIGHT POSITION, percent) 0 != (A:GEAR RIGHT POSITION, percent) 100 != and</Visibility>
+            <GaugeText id="left_gear_unlock_text">
+                <FontColor>0x2c25b2</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>27</FontHeight>
+                <GaugeString>UNLK</GaugeString>
+                <Size>83,30</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+    </SimGauge.Gauge>
+</SimBase.Document>

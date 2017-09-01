@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="power_mgt">
+    <Descr>ATR-42 Power Management</Descr>
+    <Filename>power_mgt.xml</Filename>
+    <SimGauge.Gauge id="power_mgt" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_powerplant">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="power_mgt_background.bmp" Name="power_mgt_background.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+    </SimGauge.Gauge>
+</SimBase.Document>

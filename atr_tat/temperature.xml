@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="temperature">
+    <Descr>ATR-42 Temperature Indicator</Descr>
+    <Filename>temperature.xml</Filename>
+    <SimGauge.Gauge id="temperature" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_tat">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="temperature_background.bmp" Name="temperature_background.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <Element id="tat_text">
+            <FloatPosition>55.000,19.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="tat_text">
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>40</FontHeight>
+                <GaugeString>TAT °C</GaugeString>
+                <Size>100,50</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="tat_indicator">
+            <FloatPosition>40.000,78.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="tat_indicator">
+                <FontColor>orange</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>64</FontHeight>
+                <GaugeString>%((A:TOTAL AIR TEMPERATURE, celsius))%!02d!</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Luminous>True</Luminous>
+                <Size>140,70</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="tas_knots_text">
+            <FloatPosition>217.000,19.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="tas_knots_text">
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>40</FontHeight>
+                <GaugeString>TAS KNOTS</GaugeString>
+                <Size>180,42</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="tas_knots_indicator">
+            <FloatPosition>228.000,78.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="tas_knots_indicator">
+                <FontColor>orange</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>64</FontHeight>
+                <GaugeString>%((A:AIRSPEED TRUE, knots))%!3d!</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Luminous>True</Luminous>
+                <Size>170,70</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+    </SimGauge.Gauge>
+</SimBase.Document>

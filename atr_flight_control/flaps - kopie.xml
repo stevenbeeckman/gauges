@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="flaps">
+    <Descr>ATR-42 Flaps Indicator</Descr>
+    <Filename>flaps.xml</Filename>
+    <SimGauge.Gauge id="flaps" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_flight_control">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="flaps.bmp" Name="flaps.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <Element id="FlapsIndicator">
+            <FloatPosition>63.000,104.000</FloatPosition>
+            <Polygon id="Polygon">
+                <Axis>63.000,104.000</Axis>
+                <Bright>True</Bright>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>51.000,104.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>54.000,96.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>57.000,93.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>61.000,92.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>134.000,105.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>70.000,116.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>60.000,116.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>55.000,113.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>52.000,110.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>35.000</Maximum>
+                    <Script>(A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="flaps_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="flaps_15">
+                        <ExpressionResult>15.000</ExpressionResult>
+                        <Degrees>18.000</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="flaps_25">
+                        <ExpressionResult>25.000</ExpressionResult>
+                        <Degrees>33.000</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="flaps_35">
+                        <ExpressionResult>35.000</ExpressionResult>
+                        <Degrees>48.000</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+        <Element id="ext_backlight">
+            <FloatPosition>135.000,38.000</FloatPosition>
+            <Visibility>
+                (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 0 &gt; (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 14 &lt; and
+                (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 16 &gt; (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 24 &lt; and
+                (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 26 &gt; (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 34 &lt; and
+                or or
+            </Visibility>
+            <Rectangle id="ext_backlight">
+                <Bright>True</Bright>
+                <Width>40</Width>
+                <Height>24</Height>
+                <FillColor>deepskyblue</FillColor>
+            </Rectangle>
+        </Element>
+        <Element id="ext_text">
+            <FloatPosition>140.000,43.000</FloatPosition>
+            <Visibility>
+                (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 0 &gt; (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 14 &lt; and
+                (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 16 &gt; (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 24 &lt; and
+                (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 26 &gt; (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 34 &lt; and
+                or or
+            </Visibility>
+            <GaugeText id="ext_text">
+                <Bright>True</Bright>
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>15</FontHeight>
+                <GaugeString>EXT.</GaugeString>
+                <Size>32,19</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+    </SimGauge.Gauge>
+</SimBase.Document>

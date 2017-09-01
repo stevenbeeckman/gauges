@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="flaps">
+    <Descr>ATR-42 Flaps Indicator</Descr>
+    <Filename>flaps.xml</Filename>
+    <SimGauge.Gauge id="flaps" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_flight_control">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Size>226,228</Size>
+        <Element id="background">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Rectangle id="background_rect">
+                <Width>226</Width>
+                <Height>228</Height>
+                <FillColor>0x474650</FillColor>
+            </Rectangle>
+        </Element>
+        <Element id="bezel">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Polygon id="Polygon">
+                <FillColor>0x353030</FillColor>
+                <LineWidth>2</LineWidth>
+                <LineColor>black</LineColor>
+                <Point id="Point">
+                    <FloatPosition>0.000,42.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>37.000,0.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>181.000,0.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>225.000,42.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>225.000,188.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>181.000,227.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>37.000,227.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>0.000,188.000</FloatPosition>
+                </Point>
+            </Polygon>
+        </Element>
+        <Element id="grey_bezel">
+            <FloatPosition>113.000,113.000</FloatPosition>
+            <Circle id="Circle">
+                <Axis>113.000,113.000</Axis>
+                <Radius>106</Radius>
+                <FillColor>0x77726c</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>black</LineColor>
+            </Circle>
+        </Element>
+        <Element id="darkgrey_bezel">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Polygon id="Polygon">
+                <Point id="Point">
+                    <FloatPosition>63.000,91.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>79.000,42.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>122.000,42.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>140.000,17.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>179.000,39.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>198.000,62.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>212.000,98.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>212.000,132.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>202.000,161.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>187.000,183.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>165.000,200.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>61.000,200.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>55.000,196.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>63.000,126.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>52.000,110.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>50.000,105.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>50.000,100.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>56.000,92.000</FloatPosition>
+                </Point>
+            </Polygon>
+        </Element>
+        <Element id="wing">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Polygon id="Polygon">
+                <FillColor>white</FillColor>
+                <Point id="Point">
+                    <FloatPosition>20.000,76.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>60.000,91.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>56.000,92.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>52.000,95.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>49.000,101.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>50.000,109.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>53.000,113.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>13.000,120.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>13.000,105.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>16.000,87.000</FloatPosition>
+                </Point>
+            </Polygon>
+        </Element>
+        <Element id="flaps_text">
+            <FloatPosition>80.000,46.000</FloatPosition>
+            <GaugeText id="GaugeText">
+                <Bold>True</Bold>
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>FLAPS</GaugeString>
+                <Length>5</Length>
+                <Size>55,15</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="flaps_0">
+            <FloatPosition>135.000,98.000</FloatPosition>
+            <Rectangle id="Rectangle">
+                <Width>25</Width>
+                <Height>10</Height>
+                <FillColor>white</FillColor>
+            </Rectangle>
+        </Element>
+        <Element id="flaps_0_text">
+            <FloatPosition>167.000,96.000</FloatPosition>
+            <GaugeText id="GaugeText">
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>0&#xB0;</GaugeString>
+                <Length>3</Length>
+                <Size>30,16</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="flaps_15">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Polygon id="Polygon">
+                <FillColor>white</FillColor>
+                <Point id="Point">
+                    <FloatPosition>131.000,126.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>156.000,135.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>153.000,142.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>130.000,134.000</FloatPosition>
+                </Point>
+            </Polygon>
+        </Element>
+        <Element id="flaps_15_text">
+            <FloatPosition>160.000,131.000</FloatPosition>
+            <GaugeText id="GaugeText">
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>15&#xB0;</GaugeString>
+                <Length>3</Length>
+                <Size>30,16</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="flaps_25">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Polygon id="Polygon">
+                <FillColor>white</FillColor>
+                <Point id="Point">
+                    <FloatPosition>124.000,144.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>144.000,157.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>140.000,164.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>120.000,150.000</FloatPosition>
+                </Point>
+            </Polygon>
+        </Element>
+        <Element id="flaps_25_text">
+            <FloatPosition>145.000,159.000</FloatPosition>
+            <GaugeText id="GaugeText">
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>25&#xB0;</GaugeString>
+                <Length>3</Length>
+                <Size>30,16</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="flaps_35">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Polygon id="Polygon">
+                <FillColor>white</FillColor>
+                <Point id="Point">
+                    <FloatPosition>112.000,159.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>129.000,177.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>121.000,182.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>106.000,164.000</FloatPosition>
+                </Point>
+            </Polygon>
+        </Element>
+        <Element id="flaps_35_text">
+            <FloatPosition>127.000,180.000</FloatPosition>
+            <GaugeText id="GaugeText">
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>35&#xB0;</GaugeString>
+                <Length>3</Length>
+                <Size>30,16</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="FlapsIndicator">
+            <FloatPosition>63.000,104.000</FloatPosition>
+            <Polygon id="Polygon">
+                <Axis>63.000,104.000</Axis>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>51.000,104.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>54.000,96.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>57.000,93.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>61.000,92.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>134.000,105.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>70.000,116.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>60.000,116.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>55.000,113.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>52.000,110.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>35.000</Maximum>
+                    <Script>(A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="flaps_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="flaps_15">
+                        <ExpressionResult>15.000</ExpressionResult>
+                        <Degrees>18.000</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="flaps_25">
+                        <ExpressionResult>25.000</ExpressionResult>
+                        <Degrees>33.000</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="flaps_35">
+                        <ExpressionResult>35.000</ExpressionResult>
+                        <Degrees>48.000</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+        <Element id="ext_backlight">
+            <FloatPosition>135.000,38.000</FloatPosition>
+            <Visibility>
+                (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 0 &gt; (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 14 &lt; and
+                (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 16 &gt; (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 24 &lt; and
+                (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 26 &gt; (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 34 &lt; and
+                or or
+            </Visibility>
+            <Rectangle id="ext_backlight">
+                <Width>40</Width>
+                <Height>24</Height>
+                <FillColor>deepskyblue</FillColor>
+            </Rectangle>
+        </Element>
+        <Element id="ext_text">
+            <FloatPosition>140.000,43.000</FloatPosition>
+            <Visibility>
+                (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 0 &gt; (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 14 &lt; and
+                (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 16 &gt; (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 24 &lt; and
+                (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 26 &gt; (A:TRAILING EDGE FLAPS RIGHT ANGLE, radians) rddg 34 &lt; and
+                or or
+            </Visibility>
+            <GaugeText id="ext_text">
+                <FontColor>white</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>15</FontHeight>
+                <GaugeString>EXT.</GaugeString>
+                <Size>32,19</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+    </SimGauge.Gauge>
+</SimBase.Document>

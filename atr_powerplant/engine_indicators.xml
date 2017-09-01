@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="engine_indicators">
+    <Descr>ATR-42 Engine Indicators</Descr>
+    <Filename>engine_indicators.xml</Filename>
+    <SimGauge.Gauge id="quantity" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_powerplant">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="engine_indicators_background.bmp" Name="engine_indicators_background.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <Element id="torque_left">
+            <FloatPosition>42.000,172.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="torque_left">
+                <FontColor>orange</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>19</FontHeight>
+                <GaugeString>%((A:TURB ENG MAX TORQUE PERCENT:1, percent))%!3.1d!</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Luminous>True</Luminous>
+                <Size>45,19</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="torque_left_indicator">
+            <FloatPosition>65.000,149.000</FloatPosition>
+            <Polygon id="Polygon">
+                <Axis>65.000,149.000</Axis>
+                <Bright>True</Bright>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>41.000,161.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>47.000,155.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>58.000,151.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>60.000,155.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>49.000,160.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <PointsTo>SOUTH</PointsTo>
+                <Expression id="Expression">
+                    <Script>(A:TURB ENG MAX TORQUE PERCENT:1, percent)</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="torque_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>3.700</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_20">
+                        <ExpressionResult>20.000</ExpressionResult>
+                        <Degrees>40.29</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_40">
+                        <ExpressionResult>40.000</ExpressionResult>
+                        <Degrees>74.37</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_100">
+                        <ExpressionResult>100.000</ExpressionResult>
+                        <Degrees>175.610</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_130">
+                        <ExpressionResult>130.000</ExpressionResult>
+                        <Degrees>227.030</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+        <Element id="torque_right">
+            <FloatPosition>160.000,172.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="torque_right">
+                <FontColor>orange</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>19</FontHeight>
+                <GaugeString>%((A:TURB ENG MAX TORQUE PERCENT:2, percent))%!3.1d!</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Luminous>True</Luminous>
+                <Size>42,19</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="torque_right_indicator">
+            <FloatPosition>183.000,150.000</FloatPosition>
+            <Polygon id="Polygon">
+                <Axis>183.000,150.000</Axis>
+                <Bright>True</Bright>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>185.000,156.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>185.000,171.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>183.000,175.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>181.000,171.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>181.000,156.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <PointsTo>SOUTH</PointsTo>
+                <Expression id="Expression">
+                    <Script>(A:TURB ENG MAX TORQUE PERCENT:2, percent)</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="torque_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>71.000</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_20">
+                        <ExpressionResult>20.000</ExpressionResult>
+                        <Degrees>103.570</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_40">
+                        <ExpressionResult>40.000</ExpressionResult>
+                        <Degrees>136.470</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_100">
+                        <ExpressionResult>100.000</ExpressionResult>
+                        <Degrees>209.470</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_130">
+                        <ExpressionResult>130.000</ExpressionResult>
+                        <Degrees>292.480</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+        <Element id="np_left">
+            <FloatPosition>42.000,292.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="np_left">
+                <FontColor>orange</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>19</FontHeight>
+                <GaugeString>%((A:PROP MAX RPM PERCENT:1, percent))%!3.1d!</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Luminous>True</Luminous>
+                <Size>45,19</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="np_left_indicator">
+            <FloatPosition>63.000,269.000</FloatPosition>
+            <Polygon id="Polygon">
+                <Axis>63.000,269.000</Axis>
+                <Bright>True</Bright>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>61.000,273.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>65.000,273.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>65.000,287.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>63.000,291.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>61.000,287.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <PointsTo>SOUTH</PointsTo>
+                <Expression id="Expression">
+                    <Script>(A:PROP MAX RPM PERCENT:1, percent)</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="torque_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>65.000</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_20">
+                        <ExpressionResult>20.000</ExpressionResult>
+                        <Degrees>103.500</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_40">
+                        <ExpressionResult>40.000</ExpressionResult>
+                        <Degrees>141.370</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_100">
+                        <ExpressionResult>100.000</ExpressionResult>
+                        <Degrees>256.430</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_130">
+                        <ExpressionResult>130.000</ExpressionResult>
+                        <Degrees>294.900</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+        <Element id="np_right">
+            <FloatPosition>160.000,292.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="np_right">
+                <FontColor>orange</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>19</FontHeight>
+                <GaugeString>%((A:PROP MAX RPM PERCENT:2, percent))%!3.1d!</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Luminous>True</Luminous>
+                <Size>42,19</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="np_right_indicator">
+            <FloatPosition>181.000,269.000</FloatPosition>
+            <Polygon id="Polygon">
+                <Axis>181.000,269.000</Axis>
+                <Bright>True</Bright>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>179.000,273.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>183.000,273.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>183.000,287.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>181.000,291.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>179.000,287.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <PointsTo>SOUTH</PointsTo>
+                <Expression id="Expression">
+                    <Script>(A:PROP MAX RPM PERCENT:2, percent)</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="torque_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>65.000</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_20">
+                        <ExpressionResult>20.000</ExpressionResult>
+                        <Degrees>103.500</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_40">
+                        <ExpressionResult>40.000</ExpressionResult>
+                        <Degrees>141.370</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_100">
+                        <ExpressionResult>100.000</ExpressionResult>
+                        <Degrees>256.430</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_130">
+                        <ExpressionResult>130.000</ExpressionResult>
+                        <Degrees>294.900</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+        <Element id="itt_left">
+            <FloatPosition>42.000,408.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="itt_left">
+                <FontColor>orange</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>19</FontHeight>
+                <GaugeString>%((A:TURB ENG1 ITT, celsius))%!4d!</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Luminous>True</Luminous>
+                <Size>45,19</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="itt_left_warning">
+            <FloatPosition>98.000,419.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <Circle id="Circle">
+                <Bright>True</Bright>
+                <Radius>6</Radius>
+                <FillColorScript>(A:TURB ENG1 ITT, celsius) 800 &lt; if{ &apos;black&apos; } els{ &apos;gold&apos; }</FillColorScript>
+                <LineWidth>1</LineWidth>
+                <LineColor>black</LineColor>
+            </Circle>
+        </Element> 
+        <Element id="itt_left_indicator">
+            <FloatPosition>65.000,385.000</FloatPosition>
+            <Polygon id="Polygon">
+                <Axis>65.000,385.000</Axis>
+                <Bright>True</Bright>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>63.000,392.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>67.000,392.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>67.000,404.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>65.000,408.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>63.000,404.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <PointsTo>SOUTH</PointsTo>
+                <Expression id="Expression">
+                    <Script>(A:TURB ENG1 ITT, celsius)</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="itt_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>68.550</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_500">
+                        <ExpressionResult>500.000</ExpressionResult>
+                        <Degrees>102.990</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="itt_600">
+                        <ExpressionResult>600.000</ExpressionResult>
+                        <Degrees>138.010</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="itt_700">
+                        <ExpressionResult>700.000</ExpressionResult>
+                        <Degrees>173.660</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="itt_800">
+                        <ExpressionResult>800.000</ExpressionResult>
+                        <Degrees>214.290</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="itt_900">
+                        <ExpressionResult>900.000</ExpressionResult>
+                        <Degrees>242.530</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="itt_1000">
+                        <ExpressionResult>1000.000</ExpressionResult>
+                        <Degrees>277.850</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="itt_1200">
+                        <ExpressionResult>1200.000</ExpressionResult>
+                        <Degrees>291.450</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+        <Element id="itt_right">
+            <FloatPosition>160.000,408.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="itt_right">
+                <FontColor>orange</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>19</FontHeight>
+                <GaugeString>%((A:TURB ENG2 ITT, celsius))%!4d!</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Luminous>True</Luminous>
+                <Size>42,19</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="itt_right_warning">
+            <FloatPosition>216.000,419.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <Circle id="Circle">
+                <Bright>True</Bright>
+                <Radius>6</Radius>
+                <FillColorScript>(A:TURB ENG2 ITT, celsius) 800 &lt; if{ &apos;black&apos; } els{ &apos;gold&apos; }</FillColorScript>
+                <LineWidth>1</LineWidth>
+                <LineColor>black</LineColor>
+            </Circle>
+        </Element>        
+        <Element id="itt_right_indicator">
+            <FloatPosition>183.000,385.000</FloatPosition>
+            <Polygon id="Polygon">
+                <Axis>183.000,385.000</Axis>
+                <Bright>True</Bright>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>181.000,392.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>185.000,392.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>185.000,406.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>183.000,410.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>181.000,406.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <PointsTo>SOUTH</PointsTo>
+                <Expression id="Expression">
+                    <Script>(A:TURB ENG2 ITT, celsius)</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="itt_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>68.550</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="torque_500">
+                        <ExpressionResult>500.000</ExpressionResult>
+                        <Degrees>102.990</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="itt_600">
+                        <ExpressionResult>600.000</ExpressionResult>
+                        <Degrees>138.010</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="itt_700">
+                        <ExpressionResult>700.000</ExpressionResult>
+                        <Degrees>173.660</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="itt_800">
+                        <ExpressionResult>800.000</ExpressionResult>
+                        <Degrees>214.290</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="itt_900">
+                        <ExpressionResult>900.000</ExpressionResult>
+                        <Degrees>242.530</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="itt_1000">
+                        <ExpressionResult>1000.000</ExpressionResult>
+                        <Degrees>277.850</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="itt_1200">
+                        <ExpressionResult>1200.000</ExpressionResult>
+                        <Degrees>291.450</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+        <Element id="oil_psi_left_indicator">
+            <FloatPosition>65.000,504.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <Polygon id="Polygon">
+                <Axis>65.000,504.000</Axis>
+                <Bright>True</Bright>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>63.000,517.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>67.000,517.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>67.000,528.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>65.000,533.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>63.000,528.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <PointsTo>SOUTH</PointsTo>
+                <Expression id="Expression">
+                    <Minimum>0</Minimum>
+                    <Maximum>90</Maximum>
+                    <Script>(A:GENERAL ENG OIL PRESSURE:1, psi)</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="oil_psi_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>43.450</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="oil_psi_40">
+                        <ExpressionResult>40.000</ExpressionResult>
+                        <Degrees>65.380</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="oil_psi_80">
+                        <ExpressionResult>80.000</ExpressionResult>
+                        <Degrees>128.990</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="oil_psi_90">
+                        <ExpressionResult>90.000</ExpressionResult>
+                        <Degrees>142.700</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+        <Element id="oil_psi_left_warning">
+            <FloatPosition>19.000,537.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <Circle id="Circle">
+                <Bright>True</Bright>
+                <Radius>6</Radius>
+                <FillColorScript>(A:GENERAL ENG OIL PRESSURE:1, psi) 40 &gt; if{ &apos;black&apos; } els{ &apos;red&apos; }</FillColorScript>
+                <LineWidth>1</LineWidth>
+                <LineColor>black</LineColor>
+            </Circle>
+        </Element> 
+        <Element id="oil_temp_left_indicator">
+            <FloatPosition>65.000,504.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <Polygon id="Polygon">
+                <Axis>65.000,504.000</Axis>
+                <Bright>True</Bright>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>63.000,517.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>67.000,517.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>67.000,528.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>65.000,533.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>63.000,528.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <PointsTo>SOUTH</PointsTo>
+                <Expression id="Expression">
+                    <Minimum>0</Minimum>
+                    <Maximum>130</Maximum>
+                    <Script>(A:GENERAL ENG OIL TEMPERATURE:1, celsius)</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="oil_temp_130">
+                        <ExpressionResult>130.000</ExpressionResult>
+                        <Degrees>232.310</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="oil_temp_20">
+                        <ExpressionResult>20.000</ExpressionResult>
+                        <Degrees>310.600</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="oil_temp_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>317.730</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+        <Element id="oil_psi_right_indicator">
+            <FloatPosition>183.000,504.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <Polygon id="Polygon">
+                <Axis>183.000,504.000</Axis>
+                <Bright>True</Bright>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>181.000,517.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>185.000,517.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>185.000,528.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>183.000,533.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>181.000,528.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <PointsTo>SOUTH</PointsTo>
+                <Expression id="Expression">
+                    <Minimum>0</Minimum>
+                    <Maximum>90</Maximum>
+                    <Script>(A:GENERAL ENG OIL PRESSURE:2, psi)</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="oil_psi_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>43.450</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="oil_psi_40">
+                        <ExpressionResult>40.000</ExpressionResult>
+                        <Degrees>65.380</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="oil_psi_80">
+                        <ExpressionResult>80.000</ExpressionResult>
+                        <Degrees>128.990</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="oil_psi_90">
+                        <ExpressionResult>90.000</ExpressionResult>
+                        <Degrees>142.700</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+        <Element id="oil_psi_right_warning">
+            <FloatPosition>137.000,537.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <Circle id="Circle">
+                <Bright>True</Bright>
+                <Radius>6</Radius>
+                <FillColorScript>(A:GENERAL ENG OIL PRESSURE:2, psi) 40 &gt; if{ &apos;black&apos; } els{ &apos;red&apos; }</FillColorScript>
+                <LineWidth>1</LineWidth>
+                <LineColor>black</LineColor>
+            </Circle>
+        </Element> 
+        <Element id="oil_temp_right_indicator">
+            <FloatPosition>183.000,504.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <Polygon id="Polygon">
+                <Axis>183.000,504.000</Axis>
+                <Bright>True</Bright>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>181.000,517.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>185.000,517.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>185.000,528.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>183.000,533.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>181.000,528.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <PointsTo>SOUTH</PointsTo>
+                <Expression id="Expression">
+                    <Minimum>0</Minimum>
+                    <Maximum>130</Maximum>
+                    <Script>(A:GENERAL ENG OIL TEMPERATURE:2, celsius)</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="oil_temp_130">
+                        <ExpressionResult>130.000</ExpressionResult>
+                        <Degrees>232.310</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="oil_temp_20">
+                        <ExpressionResult>20.000</ExpressionResult>
+                        <Degrees>310.600</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="oil_temp_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>317.730</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+        <Element id="fuel_flow_left">
+            <FloatPosition>42.000,644.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="fuel_flow_left">
+                <FontColor>orange</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>19</FontHeight>
+                <GaugeString>%((A:ENG FUEL FLOW PPH:1, pound per hour) 0.453592 *)%!4d!</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Luminous>True</Luminous>
+                <Size>42,19</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="fuel_flow_left_indicator">
+            <FloatPosition>64.000,619.000</FloatPosition>
+            <Polygon id="Polygon">
+                <Axis>64.000,619.000</Axis>
+                <Bright>True</Bright>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>62.000,630.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>66.000,630.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>66.000,644.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>64.000,650.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>62.000,644.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <PointsTo>SOUTH</PointsTo>
+                <Expression id="Expression">
+                    <Minimum>0</Minimum>
+                    <Maximum>700</Maximum>
+                    <Script>(A:ENG FUEL FLOW PPH:1, pound per hour) 0.453592 *</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="ff_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>68.200</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="ff_100">
+                        <ExpressionResult>100.000</ExpressionResult>
+                        <Degrees>101.310</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="ff_300">
+                        <ExpressionResult>300.000</ExpressionResult>
+                        <Degrees>162.070</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="ff_400">
+                        <ExpressionResult>400.000</ExpressionResult>
+                        <Degrees>195.420</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="ff_700">
+                        <ExpressionResult>700.000</ExpressionResult>
+                        <Degrees>292.170</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+        <Element id="fuel_flow_right">
+            <FloatPosition>160.000,644.000</FloatPosition>182 620
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="fuel_flow_right">
+                <FontColor>orange</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>19</FontHeight>
+                <GaugeString>%((A:ENG FUEL FLOW PPH:2, pound per hour) 0.453592 *)%!4d!</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Luminous>True</Luminous>
+                <Size>45,19</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="fuel_flow_right_indicator">
+            <FloatPosition>182.000,620.000</FloatPosition>
+            <Polygon id="Polygon">
+                <Axis>182.000,620.000</Axis>
+                <Bright>True</Bright>
+                <FillColor>white</FillColor>
+                <LineWidth>1</LineWidth>
+                <LineColor>white</LineColor>
+                <Point id="Point">
+                    <FloatPosition>180.000,630.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>184.000,630.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>184.000,644.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>182.000,650.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>180.000,644.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Rotation id="Rotation">
+                <PointsTo>SOUTH</PointsTo>
+                <Expression id="Expression">
+                    <Minimum>0</Minimum>
+                    <Maximum>700</Maximum>
+                    <Script>(A:ENG FUEL FLOW PPH:2, pound per hour) 0.453592 *</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="ff_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>68.200</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="ff_100">
+                        <ExpressionResult>100.000</ExpressionResult>
+                        <Degrees>101.310</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="ff_300">
+                        <ExpressionResult>300.000</ExpressionResult>
+                        <Degrees>162.070</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="ff_400">
+                        <ExpressionResult>400.000</ExpressionResult>
+                        <Degrees>195.420</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="ff_700">
+                        <ExpressionResult>700.000</ExpressionResult>
+                        <Degrees>292.170</Degrees>
+                        <FloatPosition>0.000,0.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Rotation>
+        </Element>
+    </SimGauge.Gauge>
+</SimBase.Document>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="trim_indicators">
+    <Descr>ATR-42 Trim Indicators</Descr>
+    <Filename>trim_indicators.xml</Filename>
+    <SimGauge.Gauge id="trim_indicators" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_flight_control">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="trim_indicators_background.bmp" Name="trim_indicators_background.bmp">
+<!--             <Transparent>True</Transparent> -->
+        </Image>
+        <!-- <Element id="pitch_indicator"> -->
+<!--             <FloatPosition>0.000,0.000</FloatPosition>
+            <Polygon id="Polygon">
+                <Point id="Point">
+                    <FloatPosition>567.000,539.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>661.000,523.000</FloatPosition>
+                </Point>
+                <Point id="Point">
+                    <FloatPosition>661.000,555.000</FloatPosition>
+                </Point>
+            </Polygon>
+            <Shift> 
+                <Value Minimum="-4" Maximum="9">(A:ELEVATOR TRIM POSITION, radians) rddg</Value> 
+                <Nonlinearity> 
+                    <Item Value="9" X="0" Y="-413"/>  
+                    <Item Value="8" X="0" Y="-339"/>   
+                    <Item Value="7" X="0" Y="-256"/>   
+                    <Item Value="6" X="0" Y="-233"/>   
+                    <Item Value="5" X="0" Y="-191"/>   
+                    <Item Value="4" X="0" Y="-155"/>   
+                    <Item Value="3" X="0" Y="-118"/>   
+                    <Item Value="2" X="0" Y="-84"/>   
+                    <Item Value="1" X="0" Y="-42"/>   
+                    <Item Value="0" X="0" Y="0"/>   
+                    <Item Value="-1" X="0" Y="44"/>   
+                    <Item Value="-2" X="0" Y="91"/>  
+                    <Item Value="-3" X="0" Y="144"/>   
+                    <Item Value="-4" X="0" Y="198"/> 
+                </Nonlinearity> 
+            </Shift> -->
+            <!-- <Shift id="Shift">
+                <Scale Y="47.000"></Scale>
+                <Expression id="Expression">
+                    <Minimum>-4.000</Minimum>
+                    <Maximum>9.000</Maximum>
+                    <Script>(A:ELEVATOR TRIM POSITION, radians) rddg</Script>
+                </Expression>
+                <NonlinearityTable id="NonlinearityTable">
+                    <NonlinearityEntry id="pitch_9">
+                        <ExpressionResult>9.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,126.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="pitch_8">
+                        <ExpressionResult>8.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,199.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="pitch_7">
+                        <ExpressionResult>7.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,256.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="pitch_6">
+                        <ExpressionResult>6.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,305.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="pitch_5">
+                        <ExpressionResult>5.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,347.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="pitch_4">
+                        <ExpressionResult>4.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,388.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="pitch_3">
+                        <ExpressionResult>3.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,420.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="pitch_2">
+                        <ExpressionResult>2.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,459.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="pitch_1">
+                        <ExpressionResult>1.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,495.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="pitch_0">
+                        <ExpressionResult>0.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,539.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="pitch_min1">
+                        <ExpressionResult>-1.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,583.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="pitch_min2">
+                        <ExpressionResult>-2.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,630.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="pitch_min3">
+                        <ExpressionResult>-3.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,684.000</FloatPosition>
+                    </NonlinearityEntry>
+                    <NonlinearityEntry id="pitch_min4">
+                        <ExpressionResult>-4.000</ExpressionResult>
+                        <Degrees>0.000</Degrees>
+                        <FloatPosition>0.000,735.000</FloatPosition>
+                    </NonlinearityEntry>
+                </NonlinearityTable>
+            </Shift> -->
+        <!-- </Element> -->
+        <Element id="pitch_trim_text">
+            <FloatPosition>318.000,466.000</FloatPosition>
+            <GaugeText id="GaugeText">
+                <Bright>True</Bright>
+                <FontColor>orange</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>20</FontHeight>
+                <GaugeString>%((A:ELEVATOR TRIM POSITION, radians))%!3d!</GaugeString>
+                <Luminous>True</Luminous>
+                <Size>80,30</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+    </SimGauge.Gauge>
+</SimBase.Document>

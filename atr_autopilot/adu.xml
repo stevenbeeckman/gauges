@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="adu">
+    <Descr>ATR-42 Autopilot Display Unit</Descr>
+    <Filename>adu.xml</Filename>
+    <SimGauge.Gauge id="adu" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_autopilot">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="adu_background.bmp" Name="adu_background.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <Element id="selected_altitude_text">
+            <FloatPosition>429.000,60.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
+            <GaugeText id="selected_altitude_text">
+                <FontColor>white</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>33</FontHeight>
+                <GaugeString>ALT SEL %((A:AUTOPILOT ALTITUDE LOCK VAR, feet))%!d! FT</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Size>241,41</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="ias_mode_text">
+            <FloatPosition>165.000,177.000</FloatPosition>
+            <Visibility>(A:AUTOPILOT MASTER, bool) (A:AUTOPILOT AIRSPEED HOLD, bool) and</Visibility>
+            <GaugeText id="ias_mode_text">
+                <FontColor>white</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>41</FontHeight>
+                <GaugeString>IAS %((A:AUTOPILOT AIRSPEED HOLD VAR, knots))%!d! KTS</GaugeString>
+                <HorizontalAlign>LEFT</HorizontalAlign>
+                <Size>270,41</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="vs_mode_text">
+            <FloatPosition>470.000,177.000</FloatPosition>
+            <Visibility>(A:AUTOPILOT MASTER, bool)</Visibility>
+            <GaugeText id="vs_mode_text">
+                <FontColor>white</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>41</FontHeight>
+                <GaugeString>VS %((A:AUTOPILOT VERTICAL HOLD VAR, feet per minute))%!d! FPM</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Size>200,41</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="hdg_mode_text">
+            <FloatPosition>165.000,240.000</FloatPosition>
+            <Visibility>(A:AUTOPILOT MASTER, bool) (A:AUTOPILOT HEADING LOCK, bool) and</Visibility>
+            <GaugeText id="hdg_mode_text">
+                <FontColor>lime</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>41</FontHeight>
+                <GaugeString>HDG SEL %((A:AUTOPILOT HEADING LOCK DIR, degrees))%!d!</GaugeString>
+                <HorizontalAlign>LEFT</HorizontalAlign>
+                <Size>270,41</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="nav_mode_text">
+            <FloatPosition>165.000,240.000</FloatPosition>
+            <Visibility>(A:AUTOPILOT MASTER, bool) (A:AUTOPILOT NAV1 LOCK, bool) and</Visibility>
+            <GaugeText id="nav_mode_text">
+                <FontColor>lime</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>41</FontHeight>
+                <GaugeString>NAV</GaugeString>
+                <HorizontalAlign>LEFT</HorizontalAlign>
+                <Size>270,41</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="app_mode_text">
+            <FloatPosition>165.000,240.000</FloatPosition>
+            <Visibility>(A:AUTOPILOT MASTER, bool) (A:AUTOPILOT APPROACH HOLD, bool) and</Visibility>
+            <GaugeText id="app_mode_text">
+                <FontColor>lime</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>41</FontHeight>
+                <GaugeString>LOC</GaugeString>
+                <HorizontalAlign>LEFT</HorizontalAlign>
+                <Size>270,41</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="bc_mode_text">
+            <FloatPosition>165.000,240.000</FloatPosition>
+            <Visibility>(A:AUTOPILOT MASTER, bool) (A:AUTOPILOT BACKCOURSE HOLD, bool) and</Visibility>
+            <GaugeText id="bc_mode_text">
+                <FontColor>lime</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>41</FontHeight>
+                <GaugeString>BC</GaugeString>
+                <HorizontalAlign>LEFT</HorizontalAlign>
+                <Size>270,41</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="alt_mode_text">
+            <FloatPosition>470.000,240.000</FloatPosition>
+            <Visibility>(A:AUTOPILOT MASTER, bool) (A:AUTOPILOT ALTITUDE LOCK, bool) and</Visibility>
+            <GaugeText id="vertical_mode_text">
+                <FontColor>lime</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>41</FontHeight>
+                <GaugeString>ALT</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Size>200,41</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="gs_mode_text">
+            <FloatPosition>470.000,240.000</FloatPosition>
+            <Visibility>(A:AUTOPILOT MASTER, bool) (A:AUTOPILOT GLIDESLOPE HOLD, bool) and</Visibility>
+            <GaugeText id="gs_mode_text">
+                <FontColor>lime</FontColor>
+                <FontFace>Quartz</FontFace>
+                <FontHeight>41</FontHeight>
+                <GaugeString>GS</GaugeString>
+                <HorizontalAlign>RIGHT</HorizontalAlign>
+                <Size>200,41</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+    </SimGauge.Gauge>
+</SimBase.Document>

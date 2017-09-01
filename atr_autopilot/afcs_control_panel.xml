@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="afcs_control_panel">
+    <Descr>ATR-42 AFCS Control Panel</Descr>
+    <Filename>afcs_control_panel.xml</Filename>
+    <SimGauge.Gauge id="afcs_control_panel" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_autopilot">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="afcs_control_panel_background.bmp" Name="afcs_control_panel_background.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <MouseArea id="MouseArea">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Size>1160,595</Size>
+            <CursorType>Normal</CursorType>
+            <MouseArea id="MouseArea_AP">
+                <FloatPosition>633.000,45.000</FloatPosition>
+                <Size>94,57</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:AP Pushed,bool) 1 (&gt;K:AP_MASTER) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:AP Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_YD">
+                <FloatPosition>634.000,126.000</FloatPosition>
+                <Size>94,57</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                    (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:YD Pushed,bool) 1 (&gt;K:YAW_DAMPER_TOGGLE) } 
+                    (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:YD Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_IAS">
+                <FloatPosition>313.000,45.000</FloatPosition>
+                <Size>94,57</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                    (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:ALT Pushed,bool) 1 (&gt;K:AP_AIRSPEED_HOLD) } 
+                    (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:ALT Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_ALT">
+                <FloatPosition>313.000,207.000</FloatPosition>
+                <Size>94,57</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                    (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:ALT Pushed,bool) 1 (&gt;K:AP_PANEL_ALTITUDE_HOLD) } 
+                    (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:ALT Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_HDG">
+                <FloatPosition>82.000,45.000</FloatPosition>
+                <Size>176,102</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                    (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:HDG Pushed,bool) 1 (&gt;K:AP_PANEL_HEADING_HOLD) } 
+                    (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:HDG Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_NAV">
+                <FloatPosition>82.000,127.000</FloatPosition>
+                <Size>94,57</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                    (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:NAV Pushed,bool) 1 (&gt;K:AP_NAV1_HOLD) } 
+                    (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:NAV Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_APP">
+                <FloatPosition>82.000,207.000</FloatPosition>
+                <Size>94,57</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                    (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:APP Pushed,bool) 1 (&gt;K:AP_APR_HOLD) } 
+                    (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:APP Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_VS">
+                <FloatPosition>484.000,112.000</FloatPosition>
+                <Size>57,161</Size>
+                <MouseArea id="MouseArea_VS_decrement">
+                    <FloatPosition>0.000,0.000</FloatPosition>
+                    <Size>57,80</Size>
+                    <CursorType>DownArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>1 (&gt;K:AP_VS_VAR_DEC) (G:Var4) 10 - s0 0 &lt; if{ 340 } els{ l0 } (&gt;G:Var4)</Script>
+                        <ClickRepeat>True</ClickRepeat>
+                    </MouseClick>
+                </MouseArea>
+                <MouseArea id="MouseArea_VS_increment">
+                    <FloatPosition>0.000,84.000</FloatPosition>
+                    <Size>57,81</Size>
+                    <CursorType>UpArrow</CursorType>
+                    <MouseClick id="MouseClick">
+                        <Script>1 (&gt;K:AP_VS_VAR_INC) (G:Var4) 10 + s0 360 &gt; if{ 0 (&gt;G:Var4) } els{ l0 } (&gt;G:Var4)</Script>
+                        <ClickRepeat>True</ClickRepeat>
+                    </MouseClick>
+                </MouseArea>
+            </MouseArea>
+        </MouseArea>
+    </SimGauge.Gauge>
+</SimBase.Document>

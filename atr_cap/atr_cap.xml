@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="atr_cap">
+    <Descr>ATR-42 Crew Alerting Panel</Descr>
+    <Filename>atr_cap.xml</Filename>
+    <SimGauge.Gauge id="Gauge" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_cap">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image
+                id="cap_background.bmp"
+                Alpha="True"
+                Name="cap_background.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <Element id="eng1_fire">
+            <FloatPosition>82.000,14.000</FloatPosition>
+            <GaugeText id="eng1_fire_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>(A:ENG ON FIRE:1, bool) if{ &apos;red&apos; } els{ &apos;silver&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>16</FontHeight>
+                <GaugeString>ENG 1\nFIRE</GaugeString>
+                <HorizontalAlign>CENTER</HorizontalAlign>
+                <Multiline>True</Multiline>
+                <Size>40,25</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="eng2_fire">
+            <FloatPosition>174.000,14.000</FloatPosition>
+            <GaugeText id="eng2_fire_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>(A:ENG ON FIRE:2, bool) if{ &apos;red&apos; } els{ &apos;silver&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>16</FontHeight>
+                <GaugeString>ENG 2\nFIRE</GaugeString>
+                <HorizontalAlign>CENTER</HorizontalAlign>
+                <Multiline>True</Multiline>
+                <Size>40,25</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="config">
+            <FloatPosition>34.000,74.000</FloatPosition>
+            <GaugeText id="config_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>&apos;silver&apos;</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>CONFIG</GaugeString>
+                <Size>50,20</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="excess_cabin_altitude">
+            <FloatPosition>212.000,64.000</FloatPosition>
+            <GaugeText id="excess_cabin_altitude_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>(A:PRESSURIZATION CABIN ALTITUDE, feet) 10000 &gt; if{ &apos;red&apos; } els{ &apos;silver&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>EXCESS\nCAB ALT</GaugeString>
+                <HorizontalAlign>CENTER</HorizontalAlign>
+                <Multiline>True</Multiline>
+                <Size>50,40</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="eng1_oil">
+            <FloatPosition>27.000,113.000</FloatPosition>
+            <GaugeText id="eng1_oil_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>(A:ENG OIL PRESSURE:1, psi) 40 &lt; if{ &apos;red&apos; } els{ &apos;silver&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>ENG 1 OIL</GaugeString>
+                <Size>63,16</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="eng2_oil">
+            <FloatPosition>217.000,113.000</FloatPosition>
+            <GaugeText id="eng2_oil_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>(A:ENG OIL PRESSURE:2, psi) 40 &lt; if{ &apos;red&apos; } els{ &apos;silver&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>ENG 2 OIL</GaugeString>
+                <Size>63,16</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="hyd">
+            <FloatPosition>45.000,218.000</FloatPosition>
+            <GaugeText id="hyd_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>(A:HYDRAULIC SYSTEM INTEGRITY, percent) 100 &lt; if{ &apos;gold&apos; } els{ &apos;silver&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>HYD</GaugeString>
+                <Size>30,16</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="fuel">
+            <FloatPosition>42.000,243.000</FloatPosition>
+            <GaugeText id="fuel_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>(A:FUEL TOTAL QUANTITY WEIGHT, pounds) 704 &gt; if{  &apos;silver&apos; } els{ &apos;gold&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>16</FontHeight>
+                <GaugeString>FUEL</GaugeString>
+                <Size>40,16</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="anti_icing">
+            <FloatPosition>111.000,243.000</FloatPosition>
+            <GaugeText id="anti_icing_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>(A:PITOT ICE PCT, percent) 50 &gt; (A:STRUCTURAL ICE PCT, percent) 50 &gt; or if{ &apos;gold&apos; } els{ &apos;silver&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>ANTI ICING</GaugeString>
+                <Size>73,16</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="air">
+            <FloatPosition>225.000,244.000</FloatPosition>
+            <GaugeText id="air_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>&apos;silver&apos;</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>AIR</GaugeString>
+                <Size>25,16</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="doors">
+            <FloatPosition>36.000,271.000</FloatPosition>
+            <GaugeText id="doors_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>(A:EXIT OPEN:1, percent) 0 != if{ &apos;gold&apos; } els{ &apos;silver&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>DOORS</GaugeString>
+                <Size>50,16</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="eng">
+            <FloatPosition>135.000,271.000</FloatPosition>
+            <GaugeText id="eng_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>(A:TURB ENG1 ITT, rankine) 1931.67 &gt; (A:TURB ENG2 ITT, rankine) 1931.67 &gt; or if{ &apos;gold&apos; } els{ &apos;silver&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>ENG</GaugeString>
+                <Size>50,16</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="elec">
+            <FloatPosition>222.000,271.000</FloatPosition>
+            <GaugeText id="elec_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>(A:ELECTRICAL MASTER BATTERY, bool) if{ &apos;silver&apos; } els{ &apos;red&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>14</FontHeight>
+                <GaugeString>ELEC</GaugeString>
+                <Size>32,14</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="gpws_fault">
+            <FloatPosition>109.000,321.000</FloatPosition>
+            <GaugeText id="gpws_fault_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>(A:GPWS WARNING, bool) if{  &apos;silver&apos; } els{ &apos;gold&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>16</FontHeight>
+                <GaugeString>GPWS FAULT</GaugeString>
+                <Size>77,14</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="parking_brake">
+            <FloatPosition>26.000,347.000</FloatPosition>
+            <GaugeText id="parking_brake_text">
+                <BackgroundColor>black</BackgroundColor>
+                <Bright>True</Bright>
+                <FontColorScript>(A:BRAKE PARKING POSITION, position) 0 == if{ &apos;silver&apos; } els{ &apos;gold&apos; }</FontColorScript>
+                <FontFace>Arial</FontFace>
+                <FontHeight>16</FontHeight>
+                <GaugeString>PRKG BRK</GaugeString>
+                <Size>63,16</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+    </SimGauge.Gauge>
+</SimBase.Document>
