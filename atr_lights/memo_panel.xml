@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="memo_panel">
+    <Descr>ATR-42 MEMO Panel</Descr>
+    <Filename>memo_panel.xml</Filename>
+    <SimGauge.Gauge id="memo_panel" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_lights">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="memo_panel_background.bmp" Name="memo_panel_background.bmp">
+        </Image>
+        <Element id="no_smoking_text">
+            <FloatPosition>21.000,26.000</FloatPosition>
+            <Visibility>(A:CABIN NO SMOKING ALERT SWITCH, bool)</Visibility>
+            <GaugeText id="no_smoking_text">
+                <Bright>True</Bright>
+                <FontColor>royalblue</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>12</FontHeight>
+                <GaugeString>NO\nSMKG</GaugeString>
+                <HorizontalAlign>CENTER</HorizontalAlign>
+                <Multiline>True</Multiline>
+                <Size>48,40</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+        <Element id="seat_belts_text">
+            <FloatPosition>19.000,119.000</FloatPosition>
+            <Visibility>(A:CABIN SEATBELTS ALERT SWITCH, bool)</Visibility>
+            <GaugeText id="seat_belts_text">
+                <Bright>True</Bright>
+                <FontColor>royalblue</FontColor>
+                <FontFace>Arial</FontFace>
+                <FontHeight>13</FontHeight>
+                <GaugeString>SEAT\nBELTS</GaugeString>
+                <HorizontalAlign>CENTER</HorizontalAlign>
+                <Multiline>True</Multiline>
+                <Size>48,41</Size>
+                <Transparent>True</Transparent>
+            </GaugeText>
+        </Element>
+    </SimGauge.Gauge>
+</SimBase.Document>
