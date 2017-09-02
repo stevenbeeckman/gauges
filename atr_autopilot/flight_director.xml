@@ -7,6 +7,8 @@
     <Descr>ATR-42 Flight Director</Descr>
     <Filename>flight_director.xml</Filename>
     <SimGauge.Gauge id="flight_director" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_autopilot">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Size>133,174</Size>
         <Element>
             <Select>
                 <Value>(A: AUTOPILOT FLIGHT DIRECTOR ACTIVE, bool)</Value>

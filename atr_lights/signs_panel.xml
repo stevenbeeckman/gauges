@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="signs_panel">
+    <Descr>ATR-42 Signs Panel</Descr>
+    <Filename>signs_panel.xml</Filename>
+    <SimGauge.Gauge id="signs_panel" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_lights">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="signs_panel_background.bmp" Name="signs_panel_background.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <Element>
+            <FloatPosition>86.000,74.000</FloatPosition>
+            <Select>
+                <Value>(A: CABIN NO SMOKING ALERT SWITCH, bool)</Value>
+                <Case Value="0">
+                    <Image name="no_smoking_switch_off.bmp"/>
+                </Case>
+                <Case Value="1">
+                    <Image name="no_smoking_switch_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <Element>
+            <FloatPosition>204.000,74.000</FloatPosition>
+            <Select>
+                <Value>(A: CABIN SEATBELTS ALERT SWITCH, bool)</Value>
+                <Case Value="0">
+                    <Image name="seatbelts_switch_off.bmp"/>
+                </Case>
+                <Case Value="1">
+                    <Image name="seatbelts_switch_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <MouseArea id="MouseArea">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Size>626,179</Size>
+            <CursorType>Normal</CursorType>
+            <MouseArea id="MouseArea_No_Smoking">
+                <FloatPosition>86.000,74.000</FloatPosition>
+                <Size>73,70</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:No Smoking Pushed,bool) 1 (&gt;K:KEY_CABIN_NO_SMOKING_ALERT_
+SWITCH_TOGGLE) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:No Smoking Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_Seatbelts">
+                <FloatPosition>204.000,74.000</FloatPosition>
+                <Size>76,73</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Seatbelts Pushed,bool) 1 (&gt;K:KEY_CABIN_SEATBELTS_ALERT_
+SWITCH_TOGGLE) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Seatbelts Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+        </MouseArea>
+    </SimGauge.Gauge>
+</SimBase.Document>
