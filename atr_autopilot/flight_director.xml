@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="flight_director">
+    <Descr>ATR-42 Flight Director</Descr>
+    <Filename>flight_director.xml</Filename>
+    <SimGauge.Gauge id="flight_director" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_autopilot">
+        <Element>
+            <Select>
+                <Value>(A: AUTOPILOT FLIGHT DIRECTOR ACTIVE, bool)</Value>
+                <Case Value="0">
+                    <Image name="flight_director_switch_off.bmp"/>
+                </Case>
+                <Case Value="1">
+                    <Image name="flight_director_switch.bmp">
+                </Case>
+            </Select>
+        </Element>
+        <MouseArea id="MouseArea">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Size>133,174</Size>
+            <CursorType>Normal</CursorType>
+            <MouseArea id="MouseArea_FD">
+                <FloatPosition>30.000,35.000</FloatPosition>
+                <Size>75,100</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:FD Pushed,bool) 1 (&gt;K:KEY_TOGGLE_FLIGHT_DIRECTOR) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:FD Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+        </MouseArea>
+    </SimGauge.Gauge>
+</SimBase.Document>
