@@ -171,6 +171,18 @@
                     <ClickType>LeftSingle+LeftRelease</ClickType>
                 </MouseClick>
             </MouseArea>
+            <MouseArea id="MouseArea_BC">
+                <FloatPosition>82.000,288.000</FloatPosition>
+                <Size>94,57</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                    (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:BC Pushed,bool) 1 (&gt;K:AP_BC_HOLD) } 
+                    (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:BC Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
             <MouseArea id="MouseArea_VS">
                 <FloatPosition>484.000,112.000</FloatPosition>
                 <Size>57,161</Size>
