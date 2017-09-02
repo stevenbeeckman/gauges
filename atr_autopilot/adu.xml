@@ -13,7 +13,7 @@
         </Image>
         <Element id="selected_altitude_text">
             <FloatPosition>429.000,60.000</FloatPosition>
-            <Visibility>1 1 ==</Visibility>
+            <Visibility>(A:CIRCUIT AUTOPILOT ON, bool)</Visibility>
             <GaugeText id="selected_altitude_text">
                 <FontColor>white</FontColor>
                 <FontFace>Quartz</FontFace>
