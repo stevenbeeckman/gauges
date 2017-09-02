@@ -15,7 +15,7 @@
             <FloatPosition>429.000,60.000</FloatPosition>
             <Visibility>1 1 ==</Visibility>
             <Polygon id="Polygon">
-                <FillColor>(A:AUTOPILOT MASTER, bool) if{ yellow } els{ white }</FillColor>
+                <FillColor>(A:AUTOPILOT MASTER, bool) if{ &apos;yellow&apos; } els{ &apos;white&apos; }</FillColor>
                 <LineWidth>1</LineWidth>
                 <LineColor>white</LineColor>
                 <Point id="Point">
@@ -33,7 +33,7 @@
             <FloatPosition>429.000,60.000</FloatPosition>
             <Visibility>1 1 ==</Visibility>
             <Polygon id="Polygon">
-                <FillColor>(A:AUTOPILOT MASTER, bool) if{ yellow } els{ white }</FillColor>
+                <FillColor>(A:AUTOPILOT MASTER, bool) if{ &apos;yellow&apos; } els{ &apos;white&apos; }</FillColor>
                 <LineWidth>1</LineWidth>
                 <LineColor>white</LineColor>
                 <Point id="Point">
@@ -51,7 +51,7 @@
             <FloatPosition>429.000,60.000</FloatPosition>
             <Visibility>1 1 ==</Visibility>
             <Polygon id="Polygon">
-                <FillColor>(A:AUTOPILOT YAW DAMPER, bool) if{ yellow } els{ white }</FillColor>
+                <FillColor>(A:AUTOPILOT YAW DAMPER, bool) if{ &apos;yellow&apos; } els{ &apos;white&apos; }</FillColor>
                 <LineWidth>1</LineWidth>
                 <LineColor>white</LineColor>
                 <Point id="Point">
@@ -69,7 +69,7 @@
             <FloatPosition>429.000,60.000</FloatPosition>
             <Visibility>1 1 ==</Visibility>
             <Polygon id="Polygon">
-                <FillColor>(A:AUTOPILOT YAW DAMPER, bool) if{ yellow } els{ white }</FillColor>
+                <FillColor>(A:AUTOPILOT YAW DAMPER, bool) if{ &apos;yellow&apos; } els{ &apos;white&apos; }</FillColor>
                 <LineWidth>1</LineWidth>
                 <LineColor>white</LineColor>
                 <Point id="Point">
