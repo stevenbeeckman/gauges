@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="ext_lt_panel">
+    <Descr>ATR-42 External Lights Panel</Descr>
+    <Filename>ext_lt_panel.xml</Filename>
+    <SimGauge.Gauge id="ext_lt_panel" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_lights">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="ext_lt_panel_background.bmp" Name="ext_lt_panel_background.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <Element>
+            <FloatPosition>15.000,41.000</FloatPosition>
+            <Select>
+                <Value>(A:LIGHT BEACON, bool)</Value>
+                <Case Value="0">
+                    <Image name="lights_off.bmp"/>
+                </Case>
+                <Case Value="1">
+                    <Image name="lights_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <Element>
+            <FloatPosition>104.000,41.000</FloatPosition>
+            <Select>
+                <Value>(A:LIGHT NAV, bool)</Value>
+                <Case Value="0">
+                    <Image name="lights_off.bmp"/>
+                </Case>
+                <Case Value="1">
+                    <Image name="lights_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <Element>
+            <FloatPosition>220.000,41.000</FloatPosition>
+            <Select>
+                <Value>(A:LIGHT STROBE, bool)</Value>
+                <Case Value="0">
+                    <Image name="lights_off.bmp"/>
+                </Case>
+                <Case Value="1">
+                    <Image name="lights_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <Element>
+            <FloatPosition>308.000,41.000</FloatPosition>
+            <Select>
+                <Value>(A:LIGHT LOGO, bool)</Value>
+                <Case Value="0">
+                    <Image name="lights_off.bmp"/>
+                </Case>
+                <Case Value="1">
+                    <Image name="lights_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <Element>
+            <FloatPosition>308.000,140.000</FloatPosition>
+            <Select>
+                <Value>(A:LIGHT WING, bool)</Value>
+                <Case Value="0">
+                    <Image name="lights_off.bmp"/>
+                </Case>
+                <Case Value="1">
+                    <Image name="lights_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <Element>
+            <FloatPosition>94.000,133.000</FloatPosition>
+            <Select>
+                <Value>(A:LIGHT LANDING, bool)</Value>
+                <Case Value="0">
+                    <Image name="landing_lights_off.bmp"/>
+                </Case>
+                <Case Value="1">
+                    <Image name="landing_lights_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <Element>
+            <FloatPosition>210.000,133.000</FloatPosition>
+            <Select>
+                <Value>(A:LIGHT LANDING, bool)</Value>
+                <Case Value="0">
+                    <Image name="landing_lights_off.bmp"/>
+                </Case>
+                <Case Value="1">
+                    <Image name="landing_lights_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <Element>
+            <FloatPosition>17.000,141.000</FloatPosition>
+            <Select>
+                <Value>(A:LIGHT TAXI, bool)</Value>
+                <Case Value="0">
+                    <Image name="taxi_lights_off.bmp"/>
+                </Case>
+                <Case Value="1">
+                    <Image name="taxi_lights_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <MouseArea id="MouseArea">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Size>368,217</Size>
+            <CursorType>Normal</CursorType>
+            <MouseArea id="MouseArea_Beacon">
+                <FloatPosition>15.000,41.000</FloatPosition>
+                <Size>57,57</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Beacon Pushed,bool) (&gt;K:KEY_TOGGLE_BEACON_LIGHTS) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Beacon Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_Nav">
+                <FloatPosition>104.000,41.000</FloatPosition>
+                <Size>57,57</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Nav Pushed,bool) (&gt;K:KEY_TOGGLE_NAV_LIGHTS) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Nav Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_Strobe">
+                <FloatPosition>220.000,41.000</FloatPosition>
+                <Size>57,57</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Strobe Pushed,bool) (&gt;K:KEY_STROBES_TOGGLE) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Strobe Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_Logo">
+                <FloatPosition>308.000,41.000</FloatPosition>
+                <Size>57,57</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Logo Pushed,bool) (&gt;K:KEY_TOGGLE_LOGO_LIGHTS) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Logo Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_Wing">
+                <FloatPosition>308.000,140.000</FloatPosition>
+                <Size>57,57</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Logo Pushed,bool) (&gt;K:KEY_TOGGLE_WING_LIGHTS) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Logo Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_Landing">
+                <FloatPosition>94.000,133.000</FloatPosition>
+                <Size>190,67</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Landing Pushed,bool) (&gt;K:KEY_LANDING_LIGHTS_TOGGLE) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Landing Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_Taxi">
+                <FloatPosition>17.000,140.000</FloatPosition>
+                <Size>53,53</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Taxi Pushed,bool) (&gt;K:KEY_TOGGLE_TAXI_LIGHTS) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Taxi Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+        </MouseArea>
+    </SimGauge.Gauge>
+</SimBase.Document>

@@ -14,7 +14,7 @@
         <Element>
             <FloatPosition>86.000,74.000</FloatPosition>
             <Select>
-                <Value>(A: CABIN NO SMOKING ALERT SWITCH, bool)</Value>
+                <Value>(A:CABIN NO SMOKING ALERT SWITCH, bool)</Value>
                 <Case Value="0">
                     <Image name="no_smoking_switch_off.bmp"/>
                 </Case>
@@ -26,7 +26,7 @@
         <Element>
             <FloatPosition>204.000,74.000</FloatPosition>
             <Select>
-                <Value>(A: CABIN SEATBELTS ALERT SWITCH, bool)</Value>
+                <Value>(A:CABIN SEATBELTS ALERT SWITCH, bool)</Value>
                 <Case Value="0">
                     <Image name="seatbelts_switch_off.bmp"/>
                 </Case>
