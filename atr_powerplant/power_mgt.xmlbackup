@@ -9,7 +9,6 @@
     <SimGauge.Gauge id="power_mgt" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_powerplant">
         <FloatPosition>0.000,0.000</FloatPosition>
         <Image id="power_mgt_background.bmp" Name="power_mgt_background.bmp">
-            <Transparent>True</Transparent>
         </Image>
     </SimGauge.Gauge>
 </SimBase.Document>

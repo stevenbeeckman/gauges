@@ -125,15 +125,16 @@
             </Shift> -->
         <!-- </Element> -->
         <Element id="pitch_trim_text">
-            <FloatPosition>318.000,466.000</FloatPosition>
+            <FloatPosition>56.000,70.000</FloatPosition>
             <GaugeText id="GaugeText">
+                <BackgroundColor>black</BackgroundColor>
                 <Bright>True</Bright>
                 <FontColor>orange</FontColor>
                 <FontFace>Quartz</FontFace>
-                <FontHeight>20</FontHeight>
-                <GaugeString>%((A:ELEVATOR TRIM POSITION, radians))%!3d!</GaugeString>
+                <FontHeight>18</FontHeight>
+                <GaugeString>%((A:ELEVATOR TRIM POSITION, degrees))%!03d!</GaugeString>
                 <Luminous>True</Luminous>
-                <Size>80,30</Size>
+                <Size>20,20</Size>
                 <Transparent>True</Transparent>
             </GaugeText>
         </Element>

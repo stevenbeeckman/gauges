@@ -9,14 +9,26 @@
     <SimGauge.Gauge id="flight_director" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_autopilot">
         <FloatPosition>0.000,0.000</FloatPosition>
         <Size>133,174</Size>
-        <Element>
-            <Select>
-                <Value>(A: AUTOPILOT FLIGHT DIRECTOR ACTIVE, bool)</Value>
-                <Case Value="0">
-                    <Image name="flight_director_switch_off.bmp"/>
+        <Element id="FD PushButton">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Select id="Select">
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:Autopilot flight director active, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
+                    <Image id="flight_director_switch_off.bmp" Name="flight_director_switch_off.bmp">
+                    </Image>
                 </Case>
-                <Case Value="1">
-                    <Image name="flight_director_switch.bmp">
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
+                    <Image id="flight_director_switch.bmp" Name="flight_director_switch.bmp">
+                    </Image>
                 </Case>
             </Select>
         </Element>
@@ -30,11 +42,14 @@
                 <CursorType>Hand</CursorType>
                 <MouseClick id="MouseClick">
                     <Script>
-                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:FD Pushed,bool) 1 (&gt;K:KEY_TOGGLE_FLIGHT_DIRECTOR) } 
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:FD Pushed,bool) 1 (&gt;K:TOGGLE_FLIGHT_DIRECTOR) } 
                         (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:FD Pushed,bool) }
                     </Script>
                     <ClickType>LeftSingle+LeftRelease</ClickType>
                 </MouseClick>
+                <Tooltip id="Tooltip">
+                    <DefaultId>TOOLTIPTEXT_AUTOPILOT_FLIGHT_DIRECTOR_SWITCH</DefaultId>
+                </Tooltip>
             </MouseArea>
         </MouseArea>
     </SimGauge.Gauge>

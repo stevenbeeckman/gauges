@@ -8,20 +8,22 @@
     <Filename>trim_indicators.xml</Filename>
     <SimGauge.Gauge id="trim_indicators" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_flight_control">
         <FloatPosition>0.000,0.000</FloatPosition>
+        <Size>100,135</Size>
+        <Update_When_Hidden>True</Update_When_Hidden>
         <Image id="trim_indicators_background.bmp" Name="trim_indicators_background.bmp">
-            <Transparent>True</Transparent>
         </Image>
         <Element id="pitch_trim_text">
-            <FloatPosition>360.000,466.000</FloatPosition>
+            <FloatPosition>56.000,70.000</FloatPosition>
+            <Visibility>1 1 ==</Visibility>
             <GaugeText id="GaugeText">
                 <BackgroundColor>black</BackgroundColor>
                 <Bright>True</Bright>
                 <FontColor>orange</FontColor>
                 <FontFace>Quartz</FontFace>
-                <FontHeight>96</FontHeight>
-                <GaugeString>%((A:ELEVATOR TRIM POSITION, radians) rddg)%!2.3d!</GaugeString>
-                <Size>36,100</Size>
-                <Transparent>True</Transparent>
+                <FontHeight>18</FontHeight>
+                <GaugeString>%((A:ELEVATOR TRIM POSITION, radians) rddg)%!1d!</GaugeString>
+                <Luminous>True</Luminous>
+                <Size>40,20</Size>
             </GaugeText>
         </Element>
     </SimGauge.Gauge>

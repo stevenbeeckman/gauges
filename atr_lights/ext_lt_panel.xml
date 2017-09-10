@@ -8,17 +8,26 @@
     <Filename>ext_lt_panel.xml</Filename>
     <SimGauge.Gauge id="ext_lt_panel" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_lights">
         <FloatPosition>0.000,0.000</FloatPosition>
-        <Image id="ext_lt_panel_background.bmp" Name="ext_lt_panel_background.bmp">
+        <Image id="ext_lt_background.bmp" Name="ext_lt_background.bmp">
             <Transparent>True</Transparent>
         </Image>
         <Element>
             <FloatPosition>15.000,41.000</FloatPosition>
             <Select>
-                <Value>(A:LIGHT BEACON, bool)</Value>
-                <Case Value="0">
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:LIGHT BEACON, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
                     <Image name="lights_off.bmp"/>
                 </Case>
-                <Case Value="1">
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
                     <Image name="lights_on.bmp"/>
                 </Case>
             </Select>
@@ -26,11 +35,20 @@
         <Element>
             <FloatPosition>104.000,41.000</FloatPosition>
             <Select>
-                <Value>(A:LIGHT NAV, bool)</Value>
-                <Case Value="0">
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:LIGHT NAV, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
                     <Image name="lights_off.bmp"/>
                 </Case>
-                <Case Value="1">
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
                     <Image name="lights_on.bmp"/>
                 </Case>
             </Select>
@@ -38,11 +56,20 @@
         <Element>
             <FloatPosition>220.000,41.000</FloatPosition>
             <Select>
-                <Value>(A:LIGHT STROBE, bool)</Value>
-                <Case Value="0">
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:LIGHT STROBE, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
                     <Image name="lights_off.bmp"/>
                 </Case>
-                <Case Value="1">
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
                     <Image name="lights_on.bmp"/>
                 </Case>
             </Select>
@@ -50,11 +77,20 @@
         <Element>
             <FloatPosition>308.000,41.000</FloatPosition>
             <Select>
-                <Value>(A:LIGHT LOGO, bool)</Value>
-                <Case Value="0">
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:LIGHT LOGO, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
                     <Image name="lights_off.bmp"/>
                 </Case>
-                <Case Value="1">
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
                     <Image name="lights_on.bmp"/>
                 </Case>
             </Select>
@@ -62,11 +98,20 @@
         <Element>
             <FloatPosition>308.000,140.000</FloatPosition>
             <Select>
-                <Value>(A:LIGHT WING, bool)</Value>
-                <Case Value="0">
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:LIGHT WING, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
                     <Image name="lights_off.bmp"/>
                 </Case>
-                <Case Value="1">
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
                     <Image name="lights_on.bmp"/>
                 </Case>
             </Select>
@@ -74,11 +119,20 @@
         <Element>
             <FloatPosition>94.000,133.000</FloatPosition>
             <Select>
-                <Value>(A:LIGHT LANDING, bool)</Value>
-                <Case Value="0">
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:LIGHT LANDING, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
                     <Image name="landing_lights_off.bmp"/>
                 </Case>
-                <Case Value="1">
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
                     <Image name="landing_lights_on.bmp"/>
                 </Case>
             </Select>
@@ -86,11 +140,20 @@
         <Element>
             <FloatPosition>210.000,133.000</FloatPosition>
             <Select>
-                <Value>(A:LIGHT LANDING, bool)</Value>
-                <Case Value="0">
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:LIGHT LANDING, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
                     <Image name="landing_lights_off.bmp"/>
                 </Case>
-                <Case Value="1">
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
                     <Image name="landing_lights_on.bmp"/>
                 </Case>
             </Select>
@@ -98,11 +161,20 @@
         <Element>
             <FloatPosition>17.000,141.000</FloatPosition>
             <Select>
-                <Value>(A:LIGHT TAXI, bool)</Value>
-                <Case Value="0">
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:LIGHT TAXI, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
                     <Image name="taxi_lights_off.bmp"/>
                 </Case>
-                <Case Value="1">
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
                     <Image name="taxi_lights_on.bmp"/>
                 </Case>
             </Select>
@@ -117,7 +189,7 @@
                 <CursorType>Hand</CursorType>
                 <MouseClick id="MouseClick">
                     <Script>
-                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Beacon Pushed,bool) (&gt;K:KEY_TOGGLE_BEACON_LIGHTS) } 
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Beacon Pushed,bool) 1 (&gt;K:TOGGLE_BEACON_LIGHTS) } 
                         (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Beacon Pushed,bool) }
                     </Script>
                     <ClickType>LeftSingle+LeftRelease</ClickType>
@@ -129,7 +201,7 @@
                 <CursorType>Hand</CursorType>
                 <MouseClick id="MouseClick">
                     <Script>
-                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Nav Pushed,bool) (&gt;K:KEY_TOGGLE_NAV_LIGHTS) } 
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Nav Pushed,bool) 1 (&gt;K:TOGGLE_NAV_LIGHTS) } 
                         (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Nav Pushed,bool) }
                     </Script>
                     <ClickType>LeftSingle+LeftRelease</ClickType>
@@ -141,7 +213,7 @@
                 <CursorType>Hand</CursorType>
                 <MouseClick id="MouseClick">
                     <Script>
-                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Strobe Pushed,bool) (&gt;K:KEY_STROBES_TOGGLE) } 
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Strobe Pushed,bool) 1 (&gt;K:STROBES_TOGGLE) } 
                         (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Strobe Pushed,bool) }
                     </Script>
                     <ClickType>LeftSingle+LeftRelease</ClickType>
@@ -153,7 +225,7 @@
                 <CursorType>Hand</CursorType>
                 <MouseClick id="MouseClick">
                     <Script>
-                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Logo Pushed,bool) (&gt;K:KEY_TOGGLE_LOGO_LIGHTS) } 
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Logo Pushed,bool) 1 (&gt;K:TOGGLE_LOGO_LIGHTS) } 
                         (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Logo Pushed,bool) }
                     </Script>
                     <ClickType>LeftSingle+LeftRelease</ClickType>
@@ -165,7 +237,7 @@
                 <CursorType>Hand</CursorType>
                 <MouseClick id="MouseClick">
                     <Script>
-                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Logo Pushed,bool) (&gt;K:KEY_TOGGLE_WING_LIGHTS) } 
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Logo Pushed,bool) 1 (&gt;K:TOGGLE_WING_LIGHTS) } 
                         (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Logo Pushed,bool) }
                     </Script>
                     <ClickType>LeftSingle+LeftRelease</ClickType>
@@ -177,7 +249,7 @@
                 <CursorType>Hand</CursorType>
                 <MouseClick id="MouseClick">
                     <Script>
-                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Landing Pushed,bool) (&gt;K:KEY_LANDING_LIGHTS_TOGGLE) } 
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Landing Pushed,bool) 1 (&gt;K:LANDING_LIGHTS_TOGGLE) } 
                         (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Landing Pushed,bool) }
                     </Script>
                     <ClickType>LeftSingle+LeftRelease</ClickType>
@@ -189,7 +261,7 @@
                 <CursorType>Hand</CursorType>
                 <MouseClick id="MouseClick">
                     <Script>
-                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Taxi Pushed,bool) (&gt;K:KEY_TOGGLE_TAXI_LIGHTS) } 
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Taxi Pushed,bool) 1 (&gt;K:TOGGLE_TAXI_LIGHTS) } 
                         (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Taxi Pushed,bool) }
                     </Script>
                     <ClickType>LeftSingle+LeftRelease</ClickType>
