@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="pitot_heat">
+    <Descr>ATR-42 Pitot Heat</Descr>
+    <Filename>pitot_heat.xml</Filename>
+    <SimGauge.Gauge id="pitot_heat" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_overhead">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="probes_htg_off.bmp" Name="probes_htg_off.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <Element>
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Select>
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:PITOT HEAT, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
+                    <Image name="probes_htg_off.bmp"/>
+                </Case>
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
+                    <Image name="probes_htg_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <MouseArea id="MouseArea">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Size>228,153</Size>
+            <CursorType>Normal</CursorType>
+            <MouseArea id="MouseArea_Pitot">
+                <FloatPosition>34.000,96.000</FloatPosition>
+                <Size>46,46</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Pitot Pushed,bool) 1 (&gt;K:TOGGLE_ALTERNATE_STATIC) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Pitot Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_Pitot">
+                <FloatPosition>98.000,96.000</FloatPosition>
+                <Size>46,46</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Pitot Pushed,bool) 1 (&gt;K:TOGGLE_ALTERNATE_STATIC) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Pitot Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_Pitot">
+                <FloatPosition>163.000,96.000</FloatPosition>
+                <Size>46,46</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Pitot Pushed,bool) 1 (&gt;K:TOGGLE_ALTERNATE_STATIC) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Pitot Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+        </MouseArea>
+    </SimGauge.Gauge>
+</SimBase.Document>

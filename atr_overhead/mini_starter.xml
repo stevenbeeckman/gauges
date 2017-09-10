@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="mini_starter">
+    <Descr>ATR-42 Mini Starter Panel</Descr>
+    <Filename>mini_starter.xml</Filename>
+    <SimGauge.Gauge id="mini_starter" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_overhead">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="mini_starter_background.bmp" Name="mini_starter_background.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <Element>
+            <FloatPosition>5.000,5.000</FloatPosition>
+            <Select>
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:GENERAL ENG GENERATOR ACTIVE:1, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
+                    <Image name="gen1_off.bmp"/>
+                </Case>
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
+                    <Image name="gen1_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <Element>
+            <FloatPosition>55.000,5.000</FloatPosition>
+            <Select>
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:GENERAL ENG GENERATOR ACTIVE:2, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
+                    <Image name="gen2_off.bmp"/>
+                </Case>
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
+                    <Image name="gen2_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <Element>
+            <FloatPosition>105.000,5.000</FloatPosition>
+            <Select>
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:GENERAL ENG STARTER:1, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
+                    <Image name="starter1_off.bmp"/>
+                </Case>
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
+                    <Image name="starter1_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <Element>
+            <FloatPosition>163.000,5.000</FloatPosition>
+            <Select>
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:GENERAL ENG STARTER:2, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
+                    <Image name="starter2_off.bmp"/>
+                </Case>
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
+                    <Image name="starter2_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <Element>
+            <FloatPosition>226.000,5.000</FloatPosition>
+            <Select>
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:MASTER IGNITION SWITCH, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
+                    <Image name="man_ign_off.bmp"/>
+                </Case>
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
+                    <Image name="man_ign_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <MouseArea id="MouseArea">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Size>289,94</Size>
+            <CursorType>Normal</CursorType>
+            <MouseArea id="MouseArea_Gen2">
+                <FloatPosition>5.000,5.000</FloatPosition>
+                <Size>45,53</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Gen1 Pushed,bool) 1 (&gt;K:TOGGLE_ALTERNATOR1) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Gen1 Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_Gen2">
+                <FloatPosition>55.000,5.000</FloatPosition>
+                <Size>45,53</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Gen2 Pushed,bool) 1 (&gt;K:TOGGLE_ALTERNATOR2) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Gen2 Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_Starter1">
+                <FloatPosition>105.000,5.000</FloatPosition>
+                <Size>58,69</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Starter1 Pushed,bool) 1 (&gt;K:TOGGLE_STARTER1) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Starter1 Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_Starter2">
+                <FloatPosition>163.000,5.000</FloatPosition>
+                <Size>58,68</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Starter2 Pushed,bool) 1 (&gt;K:TOGGLE_STARTER2) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Starter2 Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+            <MouseArea id="MouseArea_MAN_IGN">
+                <FloatPosition>226.000,5.000</FloatPosition>
+                <Size>58,68</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Ignition Pushed,bool) 1 (&gt;K:TOGGLE_MASTER_IGNITION_SWITCH) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Ignition Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+        </MouseArea>
+    </SimGauge.Gauge>
+</SimBase.Document>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SimBase.Document
+        Type="AceXML"
+        version="1,0"
+        id="anti_ice">
+    <Descr>ATR-42 Anti-ice</Descr>
+    <Filename>anti_ice.xml</Filename>
+    <SimGauge.Gauge id="anti_ice" ArtDirectory="C:\Users\Steven\Documents\Downloads\fsx\gauges\atr_overhead">
+        <FloatPosition>0.000,0.000</FloatPosition>
+        <Image id="anti_icing_background.bmp" Name="anti_icing_background.bmp">
+            <Transparent>True</Transparent>
+        </Image>
+        <Element>
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Select>
+                <Expression id="Expression">
+                    <Minimum>0.000</Minimum>
+                    <Maximum>1.000</Maximum>
+                    <Script>
+                        (A:CIRCUIT GENERAL PANEL ON, bool) 1 ==
+                        if{ (A:Structural Deice Switch, bool) } els{ 0 }
+                    </Script>
+                </Expression>
+                <Case id="Case">
+                    <ExpressionResult>0</ExpressionResult>
+                    <Image name="anti_icing_off.bmp"/>
+                </Case>
+                <Case id="Case">
+                    <ExpressionResult>1</ExpressionResult>
+                    <Image name="anti_icing_on.bmp"/>
+                </Case>
+            </Select>
+        </Element>
+        <MouseArea id="MouseArea">
+            <FloatPosition>0.000,0.000</FloatPosition>
+            <Size>365,558</Size>
+            <CursorType>Normal</CursorType>
+            <MouseArea id="MouseArea_Pitot">
+                <FloatPosition>73.000,276.000</FloatPosition>
+                <Size>220,224</Size>
+                <CursorType>Hand</CursorType>
+                <MouseClick id="MouseClick">
+                    <Script>
+                        (M:Event) &apos;LeftSingle&apos; scmp 0 == if{ 1 (&gt;L:Anti ice Pushed,bool) 1 (&gt;K:TOGGLE_STRUCTURAL_DEICE) } 
+                        (M:Event) &apos;LeftRelease&apos; scmp 0 == if{ 0 (&gt;L:Anti ice Pushed,bool) }
+                    </Script>
+                    <ClickType>LeftSingle+LeftRelease</ClickType>
+                </MouseClick>
+            </MouseArea>
+        </MouseArea>
+    </SimGauge.Gauge>
+</SimBase.Document>
